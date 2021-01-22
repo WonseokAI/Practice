@@ -319,5 +319,44 @@ print(a)
 '''
 사전 자료형
 
-428p
+- 사전 자료형은 key와 value의 쌍을 데이터로 가지는 자료형이다.
+- 리스트나 튜플은 값을 순차적으로 저장하지만, 사전 자료형은 순서가 없고, 변경 불가능한 데이터를 key로 사용할 수 있다.
+- 파이썬의 사전 자료형은 내부적으로 Hash Table을 이용하므로, 데이터의 검색 및 수정을 O(1)의 시간에 처리할 수 있다.
+
+- 사전 자료형에 특정한 원소가 있는지 검사할 때 'in'을 사용할 수 있다.(리스트나 튜플에서도 사용 가능)
 '''
+data = dict()
+data['one'] = 1
+data['two'] = 2
+data['three'] = 3
+print(data)
+
+if 'two' in data:
+    print('exist!')
+
+# key 데이터만 담은 리스트
+key_list = data.keys()
+
+# value 데이터만 담은 리스트
+value_list = data.values()
+
+print(key_list)
+print(value_list)
+
+# 각 키에 따른 값을 하나씩 출력
+for key in key_list:
+    print(data[key])
+
+
+'''
+집합 자료형
+
+- Set을 처리하기 위한 자료형, 기본적으로 리스트 혹은 문자열을 이용해서 만들 수 있다.
+- 중복을 허용하지 않고, 순서가 없다.
+- 인덱싱으로 값을 얻을 수 없다.
+- 키가 존재하지 않고, value만 저장한다.
+- 특정 원소가 존재하는지 검사하는 연산의 시간 복잡도는 O(1)이다.
+
+'''
+
+
