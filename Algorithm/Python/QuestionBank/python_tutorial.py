@@ -356,7 +356,116 @@ for key in key_list:
 - 인덱싱으로 값을 얻을 수 없다.
 - 키가 존재하지 않고, value만 저장한다.
 - 특정 원소가 존재하는지 검사하는 연산의 시간 복잡도는 O(1)이다.
+- 특정 데이터가 이미 등장한 적이 있는지 여부를 체크할 때 매우 효과적이다.
+
+- 집합 연산으로 합집합, 교집합, 차집합 연산을 지원한다.
+
+- 하나의 값을 추가할 때 add() : O(1)
+- 여러 개의 값을 한꺼번에 추가할 때 update()
+- 특정한 값을 제거할 때 remove() : O(1)
+'''
+
+# 집합 자료형 초기화 방법 1
+data = set([1, 1, 2, 3, 4, 4, 5])
+print(data)
+
+# 집합 자료형 초기화 방법 2
+data = {1, 1, 2, 3, 4, 4, 5}
+print(data)
+
+a = set([1,2,3,4,5])
+b = set([3,4,5,6,7])
+
+# 합집합
+print(a | b)
+
+# 교집합
+print(a & b)
+
+# 차집합
+print(a - b)
+
+data = set([1,2,3])
+print(data)
+
+# 새로운 원소 추가
+data.add(4)
+print(data)
+
+# 새로운 원소 여러 개 추가
+data.update([5,6])
+print(data)
+
+# 특정한 값을 갖는 원소 삭제
+data.remove(3)
+print(data)
+
 
 '''
+조건문
+
+- 프로그램의 흐름을 제어하는 문법
+- 조건문을 이용해서 프로그램의 로직을 설정한다.
+
+- 들여쓰기로 블록을 설정한다.
+'''
+
+score = 89
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+
+
+'''
+- 비교 연산자 : ==, !=, >, <, >=, <=
+
+- 논리 연산자 : and, or, not
+
+- in 연산자, not in 연산자 : 여러 개의 데이터를 담는 자료형에서 자료형 안에 어떤 값이 존재하는지 확인하는데 사용한다.
+
+- pass를 사용하면 해당 부분을 그냥 넘어간다. 나중에 코드를 완성하고 싶을 때 주로 사용한다.
+'''
+
+score = 100
+
+if score == 100:
+    pass
+else:
+    print("study study study study")
+
+
+# 조건문에서 실행될 소스코드가 한 줄인 경우, 줄 바꿈을 하지 않아도 간략하게 표현할 수 있다.
+score = 99
+
+if score == 100: result = "Success"
+else: result = "Fail"
+
+# 조건부 표현식
+score = 100
+result = "Success" if score == 100 else "Fail"
+
+print(result)
+
+# 조건부 표현식으로 필터를 만들 수 있다.
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = [3, 5]
+
+result = [i for i in a if i not in remove_set]
+print(result)
+
+
+'''
+반복문
+
+- 특정한 소스코드를 반복적으로 실행할 때 사용한다.
+- while문, for문
+'''
+
 
 
