@@ -107,7 +107,6 @@ print(a // b)
 # 거듭제곱
 print(a ** b)
 
-
 '''
 리스트 자료형
 
@@ -120,7 +119,7 @@ append(), remove() 등의 메서드를 지원한다.
 '''
 
 # 리스트 초기화 방법
-a = [1,2,3,4,5,6,7,8,9]
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(a)
 
 # 인덱스 n : (n - 1) 번째 원소에 접근
@@ -155,7 +154,7 @@ ex) 인덱스 -1은 가장 마지막 원소를 의미한다.
 슬라이싱을 사용할 때는 콜론(:)과 시작 인덱스와 마지막 인덱스를 이용하여 범위를 지정할 수 있다.
 '''
 
-a = [1,2,3,4,5,6,7,8,9]
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # 뒤에서 첫 번째 원소 출력
 print(a[-1])
@@ -168,7 +167,7 @@ a[3] = 7
 print(a)
 
 # 슬라이싱
-print(a[1:7]) # 첫번째 원소와 마지막 원소를 뺀 나머지
+print(a[1:7])  # 첫번째 원소와 마지막 원소를 뺀 나머지
 
 '''
 리스트 컴프리헨션
@@ -190,7 +189,7 @@ print(array)
 # N X M 2차원 리스트 초기화
 n = 7
 m = 4
-array = [[0] * m for _ in range(n)]     # 언더바(_)는 반복을 위한 변수의 값을 무시하고자 할 때 사용한다.
+array = [[0] * m for _ in range(n)]  # 언더바(_)는 반복을 위한 변수의 값을 무시하고자 할 때 사용한다.
 print(array)
 
 # 2차원 리스트는 반드시 리스트 컴프리헨션을 사용하자.
@@ -219,7 +218,7 @@ a.sort()
 print("오름차순 정렬: ", a)
 
 # 내림차순 정렬
-a.sort(reverse = True)
+a.sort(reverse=True)
 print("내림차순 정렬: ", a)
 
 # 리스트 원소 뒤집기
@@ -227,7 +226,7 @@ a.reverse()
 print("원소 뒤집기: ", a)
 
 # 특정 인덱스에 데이터 추가
-a.insert(2,3)
+a.insert(2, 3)
 print("인덱스 2에 3 추가: ", a)
 
 # 특정 값인 데이터 개수 세기
@@ -249,20 +248,18 @@ insert()를 남발하면 시간 제한을 못 지킬수도 있다.
 remove()의 시간 복잡도 또한 O(N)이다. 왜냐하면 중간 위치에 삭제할 경우 리스으틔 원소 위치를 조정해줘야 하기 때문이다.
 '''
 
-
 '''
 특정한 값의 원소를 모두 제거하는 방법
 
 이러한 함수는 따로 없지만, 리스트 컴프리헨션으로 쉽게 구현할 수 있다.
 '''
 
-a = [1,2,3,4,5,5,5]
-remove_set = [3,5]
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = [3, 5]
 
 # remove_set에 포함되지 않은 값만을 저장
 result = [i for i in a if i not in remove_set]
 print(result)
-
 
 # 문자열 자료형
 
@@ -301,7 +298,6 @@ print(a + " " + b)
 # 문자열 곱셈
 a = "String"
 print(a * 3)
-
 
 '''
 튜플 자료형
@@ -347,7 +343,6 @@ print(value_list)
 for key in key_list:
     print(data[key])
 
-
 '''
 집합 자료형
 
@@ -373,8 +368,8 @@ print(data)
 data = {1, 1, 2, 3, 4, 4, 5}
 print(data)
 
-a = set([1,2,3,4,5])
-b = set([3,4,5,6,7])
+a = set([1, 2, 3, 4, 5])
+b = set([3, 4, 5, 6, 7])
 
 # 합집합
 print(a | b)
@@ -385,7 +380,7 @@ print(a & b)
 # 차집합
 print(a - b)
 
-data = set([1,2,3])
+data = set([1, 2, 3])
 print(data)
 
 # 새로운 원소 추가
@@ -393,13 +388,12 @@ data.add(4)
 print(data)
 
 # 새로운 원소 여러 개 추가
-data.update([5,6])
+data.update([5, 6])
 print(data)
 
 # 특정한 값을 갖는 원소 삭제
 data.remove(3)
 print(data)
-
 
 '''
 조건문
@@ -421,7 +415,6 @@ elif score >= 70:
 else:
     print("F")
 
-
 '''
 - 비교 연산자 : ==, !=, >, <, >=, <=
 
@@ -439,12 +432,13 @@ if score == 100:
 else:
     print("study study study study")
 
-
 # 조건문에서 실행될 소스코드가 한 줄인 경우, 줄 바꿈을 하지 않아도 간략하게 표현할 수 있다.
 score = 99
 
-if score == 100: result = "Success"
-else: result = "Fail"
+if score == 100:
+    result = "Success"
+else:
+    result = "Fail"
 
 # 조건부 표현식
 score = 100
@@ -459,7 +453,6 @@ remove_set = [3, 5]
 result = [i for i in a if i not in remove_set]
 print(result)
 
-
 '''
 반복문
 
@@ -467,5 +460,72 @@ print(result)
 - while문, for문
 '''
 
+# while문 예시
+i = 1
+result = 0
+
+# 20보다 작거나 같을 때 반복 실행
+while i < 20:
+    if i % 2 == 1:
+        result += i
+    i += 1
+
+print(result)
+
+# for문 예시
+i = 1
+result = 0
+
+# 20보다 작거나 같을 때 반복 실행
+for i in range(1, 21):
+    if i % 2 == 1:
+        result += i
+
+print(result)
+
+'''
+함수
+
+- 함수는 똑같은 코드를 반복적으로 사용해야할 때 소스코드의 중복을 줄여서 코드를 효율적으로 작성할 때 사용한다.
+
+- 예시
+
+def 함수명(매개변수):
+    실행할 소스코드
+    return 반환 값
+'''
 
 
+# return 있는 함수
+def add2(e, f):
+    return e + f
+
+
+# return 없는 함수
+def add22(t, i):
+    print("함수의 결과: ", t + i)
+
+'''
+global 변수의 사용
+
+'''
+a = 0
+
+
+def func():
+    global a
+    a += 1
+
+
+for i in range(10):
+    func()
+
+print(a)
+
+'''
+람다 표현식(Lambda Expression)
+
+- 람수 표현식을 사용하면 함수를 매우 간단하게 작성하여 사용할 수 있다.
+'''
+
+print((lambda a, b: a + b)(4, 6))
