@@ -4,7 +4,7 @@ use the const keyword (this will declare the variable as "constant", which means
 */
 
 const int myNum = 15;  // myNum will always be 15
-myNum = 10;  // error: assignment of read-only variable 'myNum'
+// myNum = 10;  // error: assignment of read-only variable 'myNum'
 
 
 // You should always declare the variable as constant when you have values that are unlikely to change
